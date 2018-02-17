@@ -1,0 +1,23 @@
+html {
+    font-size: 12px;
+    font-family: -apple-system, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Arial, sans-serif;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #F4F5F5;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 50px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}

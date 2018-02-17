@@ -31,11 +31,14 @@
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
     "promise": "8.0.1",
+    "prop-types": "^15.6.0",
     "raf": "3.4.0",
     "react": "^16.2.0",
     "react-dev-utils": "^5.0.0",
     "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
     "style-loader": "0.19.0",
+    "styled-components": "^3.1.6",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.6.2",
     "webpack": "3.8.1",
@@ -93,9 +96,9 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "@storybook/react": "^3.3.13",
     "@storybook/addon-actions": "^3.3.13",
     "@storybook/addon-links": "^3.3.13",
-    "@storybook/addons": "^3.3.13"
+    "@storybook/addons": "^3.3.13",
+    "@storybook/react": "^3.3.13"
   }
 }

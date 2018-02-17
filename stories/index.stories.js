@@ -1,13 +1,24 @@
-import React from 'react';
+import React from 'react'
 
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
+import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
+import { linkTo } from '@storybook/addon-links'
 
-import { Button, Welcome } from '@storybook/react/demo';
+import { Welcome } from '@storybook/react/demo'
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+import Button from '../src/components/Button'
+import GridDemo from './GridDemo'
+import ContainerDemo from './ContainerDemo'
 
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>);
+import '../src/reboot.css'
+
+storiesOf('Welcome', module).add('to Storybook', () => (
+  <Welcome showApp={linkTo('Button')} />
+))
+
+storiesOf('Button', module).add('test', () => <Button>button</Button>)
+
+storiesOf('Grid', module).add('grid row column', () => <GridDemo />)
+
+storiesOf('Container', module).add('container', () => <ContainerDemo />)
+
