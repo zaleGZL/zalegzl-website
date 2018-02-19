@@ -18,9 +18,7 @@ const Col = styled.div`
   float: left;
   padding: 0 ${({ gutter }) => getPixelString(gutter, 15)};
 
-  /* ${({ xs }) => (xs !== undefined ? getWidthString(xs) : 'width: 100%')}; */
-
-  @media only screen and (max-width: 575px) {
+  @media only screen and (min-width: 1px) {
     display: block;
     width: 100%;
     ${({ xs }) => getWidthString(xs)};

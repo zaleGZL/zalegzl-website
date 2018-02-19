@@ -10,7 +10,7 @@ const responsiveTopNavClassName = 'responsive-top-nav'
 // 导航链接被激活的样式
 const activeStyle = {
   color: 'white',
-  backgroundColor: '#77A6C8'
+  backgroundColor: '#1e90ff'
 }
 
 const StyledTopNav = styled.div`
@@ -23,6 +23,7 @@ const StyledTopNav = styled.div`
   font-weight: 300;
 
   z-index: 1000;
+  transition: background-color .3s;
 
   & a {
     float: left;
@@ -33,10 +34,12 @@ const StyledTopNav = styled.div`
     text-decoration: none;
     font-size: 17px;
     line-height: 22px;
+
+    transition: background-color .3s;
   }
 
   & a:hover {
-    background-color: #77A6C8;
+    background-color: #1e90ff;
   }
 
   & .icon {
@@ -91,6 +94,7 @@ const StyledIcon = styled.a`
 const StyledBackgroundContainer = styled(Container)`
   background-color: #fff;
   border-bottom: 1px solid #d6d3d3;
+  border-top: 3px solid #268ffb;
 
   position: absolute;
   left: 0;

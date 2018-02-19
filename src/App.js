@@ -3,9 +3,16 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import TopNav from './components/TopNav'
 import Container from './components/Container'
 import BlogSummary from './components/BlogSummary'
+import ProfileCard from './components/ProfileCard'
 import Grid from './components/Grid'
 import Loader from './components/Loader'
+import Pagination from './components/Pagination'
+import Footer from './components/Footer'
+import ContentLoader from './components/ContentLoader'
+import Blog from './components/Blog'
+import ArticleDirectory from './components/ArticleDirectory'
 import styled from 'styled-components'
+import ScrollToTop from 'react-scroll-up'
 import './reboot.css'
 
 const navList = [
@@ -39,20 +46,38 @@ const navList = [
   }
 ]
 
+const StyledScrollUp = styled.div`
+  font-size: 30px;
+  color: #1c93e0;
+  &:hover {
+    opacity: 0.6;
+  }
+`
+
 const App = () => (
   <Router>
     <div>
       <TopNav navList={navList} />
       <Container lrPadding={0} style={{ marginTop: '30px' }}>
         <Grid.Row>
-          <Grid.Col xs={12} sm={10} md={8} gutter={5}>
-            <BlogSummary/>
+          <Grid.Col xs={12} sm={12} md={12} lg={8.5} xl={9}>
+            <Blog />
+            {/* <ContentLoader height={150}/> */}
+            {/* <BlogSummary /> */}
+            {/* <Pagination /> */}
           </Grid.Col>
-          <Grid.Col xs={0} sm={2} md={4} gutter={0}>
-            456
+          <Grid.Col xs={0} sm={0} md={0} lg={3.5} xl={3}>
+            <ProfileCard />
+            <ArticleDirectory />
           </Grid.Col>
         </Grid.Row>
       </Container>
+      <Footer />
+      <ScrollToTop showUnder={160}>
+        <StyledScrollUp>
+          <i className="far fa-arrow-alt-circle-up" />
+        </StyledScrollUp>
+      </ScrollToTop>
     </div>
   </Router>
 )

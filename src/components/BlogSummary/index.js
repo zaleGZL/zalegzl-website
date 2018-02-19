@@ -5,12 +5,11 @@ import { Link } from 'react-router-dom'
 import Tag from '../Tag'
 
 const StyledContainer = styled.div`
-  width: 100%;
-  border-radius: 3px;
-  background-color: #ffffff;
-  border: 1px solid #e8e8e8;
+  background-color: #fff;
   padding: 1.1rem 1.3rem;
   margin-bottom: 1rem;
+
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
 `
 
 const StyledTitle = styled.h4`
@@ -95,6 +94,15 @@ const BlogSummary = () => (
 
 const Blog = () => (
   <div>
+    <BlogSummary />
+    <BlogSummary />
+    <BlogSummary />
+    <BlogSummary />
+    <BlogSummary />
+    <BlogSummary />
+    <BlogSummary />
+    <BlogSummary />
+    <BlogSummary />
     <BlogSummary />
   </div>
 )
