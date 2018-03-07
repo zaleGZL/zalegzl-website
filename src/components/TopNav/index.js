@@ -17,13 +17,13 @@ const StyledTopNav = styled.div`
   /* 使用BFC清除浮动 */
   overflow: hidden;
 
-  background-color: #FFF;
+  background-color: #fff;
   position: relative;
   min-height: 22px;
   font-weight: 300;
 
   z-index: 1000;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
 
   & a {
     float: left;
@@ -35,7 +35,7 @@ const StyledTopNav = styled.div`
     font-size: 17px;
     line-height: 22px;
 
-    transition: background-color .3s;
+    transition: background-color 0.3s;
   }
 
   & a:hover {
@@ -111,7 +111,8 @@ class TopNav extends Component {
     this.onLinkClick = this.onLinkClick.bind(this)
   }
 
-  onIconClick() {
+  onIconClick(e) {
+    e.preventDefault()
     if (this.state.className !== '') {
       this.setState({ className: '' })
     } else {
@@ -141,9 +142,9 @@ class TopNav extends Component {
               </NavLink>
             ))}
             <StyledIcon
-              href="javascript:void(0);"
+              href="#ignore"
               className="icon"
-              onClick={this.onIconClick}
+              onClick={e => this.onIconClick(e)}
             >
               &#9776;
             </StyledIcon>
@@ -163,7 +164,7 @@ class TopNav extends Component {
  *   icon: font awesome 对应图标的 class 名称
  */
 TopNav.propTypes = {
-  navList: PropTypes.array.isRequired
+  navList: PropTypes.array
 }
 
 export default TopNav

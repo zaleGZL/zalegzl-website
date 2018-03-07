@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 import { colorStyle, colorName } from '../../utils'
 
 const StyledTag = styled.div`
@@ -24,6 +23,8 @@ const StyledTag = styled.div`
   & a {
     color: ${({ color }) => color && colorStyle[color]['color']};
   }
+  color: ${({ color }) => color && colorStyle[color]['color']};
+
   background-color: ${({ color }) =>
     color && colorStyle[color]['background-color']};
   border-color: ${({ color }) => color && colorStyle[color]['border-color']};
@@ -39,24 +40,31 @@ class Tag extends Component {
     } else if (props.color) {
       color = props.color
     }
-
     this.state = { color }
   }
 
   render() {
+    const { to, children, isLink, onClick } = this.props
     return (
       <StyledTag color={this.state.color}>
-        <Link to={this.props.to}>{this.props.children}</Link>
+        {isLink ? (
+          <a href={to} onClick={onClick}>
+            {children}
+          </a>
+        ) : (
+          <span>{children}</span>
+        )}
       </StyledTag>
     )
   }
 }
-
 Tag.propTypes = {
   color: PropTypes.string,
   random: PropTypes.bool,
-  to: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
+  to: PropTypes.string,
+  children: PropTypes.node,
+  isLink: PropTypes.bool,
+  onClick: PropTypes.func
 }
 
 export default Tag

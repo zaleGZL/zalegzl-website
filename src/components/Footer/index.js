@@ -1,14 +1,19 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import Styled from 'styled-components'
 
-const StyledFooter = styled.div`
-  padding: 30px 0;
+const StyledFooter = Styled.div`
+  padding: 60px 0 10px;
   text-align: center;
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 2;
-  color: #999;
+  color: #3c3b3b;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
 `
 
 const Footer = () => (
