@@ -1,4 +1,4 @@
-# 博客项目
+# 博客前台
 
 项目地址: [https://github.com/zaleGZL/zalegzl-website](https://github.com/zaleGZL/zalegzl-website)
 
