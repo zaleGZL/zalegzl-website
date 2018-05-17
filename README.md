@@ -4,8 +4,6 @@
 
 如果你觉得项目不错的话，欢迎点击右上角 'star' 支持下，万分感谢! ~\(≧▽≦)/~
 
-线上地址: [http://guozeling.cn/blogs](http://guozeling.cn/blogs)
-
 ## 前言
 
 以前我是用 hexo + next 来搭建自己的博客，但最近学习了 React 后，深深地被它的组件化开发思想所吸引，刚好寒假放假有时间，所以我就用 React 搭建了一个自己的博客。React 实际上只是对应 MVC 中的视图层，要想搭建一个完整的应用，仅有 React 是不够的，我们还需要其它的库或框架，例如用来管理数据的 redux，用于实现前端路由的 react-router 等等。
